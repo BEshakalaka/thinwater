@@ -1,0 +1,38 @@
+server:
+  port: 5002
+
+spring:
+    datasource:
+      druid:
+        driver-class-name: com.mysql.cj.jdbc.Driver             # mysql驱动包
+        url: jdbc:mysql://xxxxxxxxxxx:3306/wxfund?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8  # 数据库名称
+        username: xxxxxxxxxxx
+        password: xxxxxxxxxxx
+    mail:
+      #smtp服务主机  qq邮箱则为smtp.qq.com
+      host: smtp.qq.com
+      #服务协议
+      protocol: smtp
+      # 编码集
+      default-encoding: UTF-8
+      #发送邮件的账户
+      username: xxxxxxxxxx@qq.com
+      #授权码
+      password: xxxxxxxxxxx
+      test-connection: true
+      properties:
+        mail:
+          smtp:
+            auth: true
+            starttls:
+              enable: true
+              required: true
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
+
